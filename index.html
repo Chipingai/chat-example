@@ -34,6 +34,14 @@
           window.scrollTo(0, document.body.scrollHeight);
         });
       });
+	  
+	  
+	// new code here
+	  
+        var username = prompt('Please tell me your name');
+        socket.emit('username', username);
+			
+	// end new code
     </script>
   </body>
 </html>
