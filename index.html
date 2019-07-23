@@ -37,6 +37,16 @@
 	  
 	  
 	// new code here
+	
+	
+            // append the chat text message
+            socket.on('chat_message', function(msg){
+                $('#messages').append($('<li>').html(msg));
+            });
+            // append text if someone is online
+            socket.on('is_online', function(username) {
+                $('#messages').append($('<li>').html(username));
+            });
 	  
         var username = prompt('Please tell me your name');
         socket.emit('username', username);
